@@ -26,5 +26,16 @@ public class RangeMain {
         range = range.getIntersection(new Range(2, 26));
         System.out.println("Новый диапазон от " + range.getFrom() + " до " + range.getTo());
 
+        Range[] array = range.getCombiningIntervals(new Range(27, 35));
+
+        if (array.length == 1) {
+            System.out.println("Результат пересечения диапазонов, новый диапазон от "
+                    + array[0].getFrom() + " до " + array[0].getTo());
+        } else {
+            for (int i = 0; i < array.length; i++) {
+                System.out.println("Результат пересечения диапазонов, новый диапазон " + (i + 1) + " куска " + "от "
+                        + array[i].getFrom() + " до " + array[i].getTo());
+            }
+        }
     }
 }

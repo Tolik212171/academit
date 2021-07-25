@@ -33,11 +33,19 @@ public class Range {
         return checkedNumber >= from && checkedNumber <= to;
     }
 
-    public Range getIntersection(Range range){
+    public Range getIntersection(Range range) {
         if (range.to <= from || range.from >= to) {
             return null;
         }
 
-        return new Range (Math.min(range.from, from), Math.max(range.to, to));
+        return new Range(Math.min(range.from, from), Math.max(range.to, to));
+    }
+
+    public Range[] getCombiningIntervals(Range range) {
+        if (range.to < from || range.from > to) {
+            return new Range[]{new Range(range.from, range.to), new Range(from, to)};
+        }
+
+        return new Range[]{new Range(Math.min(range.from, from), Math.max(range.to, to))};
     }
 }
