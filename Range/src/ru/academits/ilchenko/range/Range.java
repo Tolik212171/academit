@@ -30,6 +30,6 @@ public class Range {
     }
 
     public boolean isInside(double checkedNumber) {
-       return !(checkedNumber < from) && !(checkedNumber > to);
+        return checkedNumber >= from && checkedNumber <= to;
     }
 }
