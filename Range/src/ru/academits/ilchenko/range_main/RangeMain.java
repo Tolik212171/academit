@@ -22,5 +22,9 @@ public class RangeMain {
         range.setTo(22);
 
         System.out.println("Новый диапазон от " + range.getFrom() + " до " + range.getTo());
+
+        range = range.getIntersection(new Range(2, 26));
+        System.out.println("Новый диапазон от " + range.getFrom() + " до " + range.getTo());
+
     }
 }

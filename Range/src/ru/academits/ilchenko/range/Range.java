@@ -32,4 +32,12 @@ public class Range {
     public boolean isInside(double checkedNumber) {
         return checkedNumber >= from && checkedNumber <= to;
     }
+
+    public Range getIntersection(Range range){
+        if (range.to <= from || range.from >= to) {
+            return null;
+        }
+
+        return new Range (Math.min(range.from, from), Math.max(range.to, to));
+    }
 }
