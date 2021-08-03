@@ -32,9 +32,9 @@ public class RangeMain {
             System.out.println("Результат объединения диапазонов, новый диапазон от "
                     + array1[0].getFrom() + " до " + array1[0].getTo());
         } else {
+            System.out.println("Результат объединения диапазонов, новые диапазоны:");
             for (int i = 0; i < array1.length; i++) {
-                System.out.println("Результат объединения диапазонов, новый диапазон " + (i + 1) + " куска " + "от "
-                        + array1[i].getFrom() + " до " + array1[i].getTo());
+                System.out.println((i + 1) + ") " + array1[i].toString());
             }
         }
 
@@ -44,12 +44,12 @@ public class RangeMain {
         if (array2.length == 0) {
             System.out.println("Разность дала нулевой результат");
         } else if (array2.length == 1) {
-            System.out.println("Результат разности, новый диапазон:                                                                        й диапазон от "
-                    + array2[0].getFrom() + " до " + array2[0].getTo());
+            System.out.println("Результат разности, новый диапазон:"
+                    + array2[0].toString());
         } else {
+            System.out.println("Результат разности, новые диапазоны:");
             for (int i = 0; i < array1.length; i++) {
-                System.out.println("Результат разности, новый диапазон: " + (i + 1) + " куска " + "от "
-                        + array2[i].getFrom() + " до " + array2[i].getTo());
+                System.out.println((i + 1) + ") " + array2[i].toString());
             }
         }
     }

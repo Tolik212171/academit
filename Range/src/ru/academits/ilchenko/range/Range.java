@@ -68,4 +68,8 @@ public class Range {
 
         return new Range[]{};
     }
+
+    public String toString() {
+        return ("(" + from + " ; " + to + ")");
+    }
 }
