@@ -29,8 +29,8 @@ public class Range {
         return to - from;
     }
 
-    public boolean isInside(double checkedNumber) {
-        return checkedNumber >= from && checkedNumber <= to;
+    public boolean isInside(double number) {
+        return number >= from && number <= to;
     }
 
     public Range getIntersection(Range range) {
@@ -63,7 +63,7 @@ public class Range {
         }
 
         if (range.from >= to || range.to <= from) {
-            return new Range[]{this};
+            return new Range[]{new Range(from, to)};
         }
 
         return new Range[]{};
